@@ -23,13 +23,22 @@
 
                         </th>
                         <th>
-                            {{ trans('global.product.fields.name') }}
+                            {{ trans('global.product.fields.RazonSocial') }}
                         </th>
                         <th>
-                            {{ trans('global.product.fields.description') }}
+                            {{ trans('global.product.fields.Giro') }}
                         </th>
                         <th>
-                            {{ trans('global.product.fields.price') }}
+                            {{ trans('global.product.fields.Telefono') }}
+                        </th>
+                        <th>
+                            {{ trans('global.product.fields.Direccion') }}
+                        </th>
+                        <th>
+                            {{ trans('global.product.fields.Contacto') }}
+                        </th>
+                        <th>
+                            {{ trans('global.product.fields.Correo') }}
                         </th>
                         <th>
                             &nbsp;
@@ -43,13 +52,22 @@
 
                             </td>
                             <td>
-                                {{ $product->name ?? '' }}
+                                {{ $product->RazonSocial ?? '' }}
                             </td>
                             <td>
-                                {{ $product->description ?? '' }}
+                                {{ $product->Giro ?? '' }}
                             </td>
                             <td>
-                                {{ $product->price ?? '' }}
+                                {{ $product->Telefono ?? '' }}
+                            </td>
+                            <td>
+                                {{ $product->Direccion ?? '' }}
+                            </td>
+                            <td>
+                                {{ $product->Contacto ?? '' }}
+                            </td>
+                            <td>
+                                {{ $product->Correo ?? '' }}
                             </td>
                             <td>
                                 @can('product_show')
@@ -91,13 +109,10 @@
       var ids = $.map(dt.rows({ selected: true }).nodes(), function (entry) {
           return $(entry).data('entry-id')
       });
-
       if (ids.length === 0) {
         alert('{{ trans('global.datatables.zero_selected') }}')
-
         return
       }
-
       if (confirm('{{ trans('global.areYouSure') }}')) {
         $.ajax({
           headers: {'x-csrf-token': _token},
@@ -112,10 +127,8 @@
 @can('product_delete')
   dtButtons.push(deleteButton)
 @endcan
-
   $('.datatable:not(.ajaxTable)').DataTable({ buttons: dtButtons })
 })
-
 </script>
 @endsection
 @endsection

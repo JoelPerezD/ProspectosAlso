@@ -15,7 +15,7 @@ class StoreProductRequest extends FormRequest
     public function rules()
     {
         return [
-            'name' => [
+            'RazonSocial' => [
                 'required',
             ],
         ];

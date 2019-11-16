@@ -16,11 +16,17 @@ class Product extends Model
     ];
 
     protected $fillable = [
-        'name',
-        'price',
+        'RazonSocial',
+        'Giro',
+        'Telefono',
+        'Direccion',
+        'Zona',
+        'Ciudad',
+        'Estado',
+        'Contacto',
+        'Correo',
         'created_at',
         'updated_at',
         'deleted_at',
-        'description',
     ];
 }

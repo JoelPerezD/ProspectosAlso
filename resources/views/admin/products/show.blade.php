@@ -11,26 +11,74 @@
             <tbody>
                 <tr>
                     <th>
-                        {{ trans('global.product.fields.name') }}
+                        {{ trans('global.product.fields.RazonSocial') }}
                     </th>
                     <td>
-                        {{ $product->name }}
+                        {{ $product->RazonSocial }}
                     </td>
                 </tr>
                 <tr>
                     <th>
-                        {{ trans('global.product.fields.description') }}
+                        {{ trans('global.product.fields.Giro') }}
                     </th>
                     <td>
-                        {!! $product->description !!}
+                        {!! $product->Giro !!}
                     </td>
                 </tr>
                 <tr>
                     <th>
-                        {{ trans('global.product.fields.price') }}
+                        {{ trans('global.product.fields.Telefono') }}
                     </th>
                     <td>
-                        ${{ $product->price }}
+                        ${{ $product->Telefono }}
+                    </td>
+                </tr>
+                <tr>
+                    <th>
+                        {{ trans('global.product.fields.Direccion') }}
+                    </th>
+                    <td>
+                        ${{ $product->Direccion }}
+                    </td>
+                </tr>
+                <tr>
+                    <th>
+                        {{ trans('global.product.fields.Zona') }}
+                    </th>
+                    <td>
+                        ${{ $product->Zona }}
+                    </td>
+                </tr>
+                <tr>
+                    <th>
+                        {{ trans('global.product.fields.Ciudad') }}
+                    </th>
+                    <td>
+                        ${{ $product->Ciudad }}
+                    </td>
+                </tr>
+                <tr>
+                    <th>
+                        {{ trans('global.product.fields.Estado') }}
+                    </th>
+                    <td>
+                        ${{ $product->Estado }}
+                    </td>
+                </tr>
+                <tr>
+                    <th>
+                        {{ trans('global.product.fields.Contacto') }}
+                    </th>
+                    <td>
+                        ${{ $product->Contacto }}
+                    </td>
+                </tr>
+                <tr>
+                    <th>
+                        {{ trans('global.product.fields.Correo') }}
+                    </th>
+                    <td>
+                        ${{ $product->Correo }}
                     </td>
                 </tr>
             </tbody>

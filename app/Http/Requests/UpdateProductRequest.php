@@ -15,7 +15,7 @@ class UpdateProductRequest extends FormRequest
     public function rules()
     {
         return [
-            'name' => [
+            'RazonSocial' => [
                 'required',
             ],
         ];
