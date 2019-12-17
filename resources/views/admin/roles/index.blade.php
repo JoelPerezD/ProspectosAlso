@@ -11,7 +11,7 @@
 @endcan
 <div class="card">
     <div class="card-header">
-        {{ trans('global.role.title_singular') }} {{ trans('global.list') }}
+    {{ trans('global.list') }} de {{ trans('global.role.title') }} 
     </div>
 
     <div class="card-body">
@@ -58,13 +58,13 @@
                                         {{ trans('global.edit') }}
                                     </a>
                                 @endcan
-                                @can('role_delete')
+                               <!-- @can('role_delete')
                                     <form action="{{ route('admin.roles.destroy', $role->id) }}" method="POST" onsubmit="return confirm('{{ trans('global.areYouSure') }}');" style="display: inline-block;">
                                         <input type="hidden" name="_method" value="DELETE">
                                         <input type="hidden" name="_token" value="{{ csrf_token() }}">
                                         <input type="submit" class="btn btn-xs btn-danger" value="{{ trans('global.delete') }}">
                                     </form>
-                                @endcan
+                                @endcan-->
                             </td>
 
                         </tr>
@@ -106,7 +106,7 @@
   }
   let dtButtons = $.extend(true, [], $.fn.dataTable.defaults.buttons)
 @can('role_delete')
-  dtButtons.push(deleteButton)
+ // dtButtons.push(deleteButton)
 @endcan
 
   $('.datatable:not(.ajaxTable)').DataTable({ buttons: dtButtons })

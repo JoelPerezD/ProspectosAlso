@@ -39,11 +39,11 @@
                                     <input name="remember" type="checkbox" /> {{ trans('global.remember_me') }}
                                 </label>
                             </div>
-                            <div class="col-6 text-right">
+                           <!-- <div class="col-6 text-right">
                                 <a class="btn btn-link px-0" href="{{ route('password.request') }}">
                                     {{ trans('global.forgot_password') }}
                                 </a>
-                            </div>
+                            </div>-->
                         </div>
                     </form>
                 </div>

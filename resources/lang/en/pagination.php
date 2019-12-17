@@ -1,7 +1,7 @@
 <?php
 
 return [
-    'previous'       => '&laquo; Previous',
+    'previous'       => '&laquo; Siguiente',
     'next'           => 'Next &raquo;',
     'site_title'     => 'Laravel + CoreUI',
     'userManagement' => [

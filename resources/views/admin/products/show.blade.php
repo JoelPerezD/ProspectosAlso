@@ -30,7 +30,7 @@
                         {{ trans('global.product.fields.Telefono') }}
                     </th>
                     <td>
-                        ${{ $product->Telefono }}
+                        {{ $product->Telefono }}
                     </td>
                 </tr>
                 <tr>
@@ -38,7 +38,7 @@
                         {{ trans('global.product.fields.Direccion') }}
                     </th>
                     <td>
-                        ${{ $product->Direccion }}
+                        {{ $product->Direccion }}
                     </td>
                 </tr>
                 <tr>
@@ -46,7 +46,7 @@
                         {{ trans('global.product.fields.Zona') }}
                     </th>
                     <td>
-                        ${{ $product->Zona }}
+                        {{ $product->Zona }}
                     </td>
                 </tr>
                 <tr>
@@ -54,7 +54,7 @@
                         {{ trans('global.product.fields.Ciudad') }}
                     </th>
                     <td>
-                        ${{ $product->Ciudad }}
+                        {{ $product->Ciudad }}
                     </td>
                 </tr>
                 <tr>
@@ -62,7 +62,7 @@
                         {{ trans('global.product.fields.Estado') }}
                     </th>
                     <td>
-                        ${{ $product->Estado }}
+                        {{ $product->Estado }}
                     </td>
                 </tr>
                 <tr>
@@ -70,7 +70,7 @@
                         {{ trans('global.product.fields.Contacto') }}
                     </th>
                     <td>
-                        ${{ $product->Contacto }}
+                        {{ $product->Contacto }}
                     </td>
                 </tr>
                 <tr>
@@ -78,7 +78,7 @@
                         {{ trans('global.product.fields.Correo') }}
                     </th>
                     <td>
-                        ${{ $product->Correo }}
+                        {{ $product->Correo }}
                     </td>
                 </tr>
             </tbody>

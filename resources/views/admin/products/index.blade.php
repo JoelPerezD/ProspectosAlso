@@ -11,7 +11,7 @@
 @endcan
 <div class="card">
     <div class="card-header">
-        {{ trans('global.product.title_singular') }} {{ trans('global.list') }}
+    {{ trans('global.list') }} de {{ trans('global.product.title') }} 
     </div>
 
     <div class="card-body">
@@ -125,7 +125,7 @@
   }
   let dtButtons = $.extend(true, [], $.fn.dataTable.defaults.buttons)
 @can('product_delete')
-  dtButtons.push(deleteButton)
+//  dtButtons.push(deleteButton)
 @endcan
   $('.datatable:not(.ajaxTable)').DataTable({ buttons: dtButtons })
 })

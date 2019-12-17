@@ -11,7 +11,7 @@
 @endcan
 <div class="card">
     <div class="card-header">
-        {{ trans('global.user.title_singular') }} {{ trans('global.list') }}
+    {{ trans('global.list') }} de  {{ trans('global.user.title') }} 
     </div>
 
     <div class="card-body">
@@ -28,9 +28,9 @@
                         <th>
                             {{ trans('global.user.fields.email') }}
                         </th>
-                        <th>
+                        <!--<th>
                             {{ trans('global.user.fields.email_verified_at') }}
-                        </th>
+                        </th>-->
                         <th>
                             {{ trans('global.user.fields.roles') }}
                         </th>
@@ -51,9 +51,9 @@
                             <td>
                                 {{ $user->email ?? '' }}
                             </td>
-                            <td>
+                           <!-- <td>
                                 {{ $user->email_verified_at ?? '' }}
-                            </td>
+                            </td>-->
                             <td>
                                 @foreach($user->roles as $key => $item)
                                     <span class="badge badge-info">{{ $item->title }}</span>
@@ -118,7 +118,7 @@
   }
   let dtButtons = $.extend(true, [], $.fn.dataTable.defaults.buttons)
 @can('user_delete')
-  dtButtons.push(deleteButton)
+ // dtButtons.push(deleteButton)
 @endcan
 
   $('.datatable:not(.ajaxTable)').DataTable({ buttons: dtButtons })

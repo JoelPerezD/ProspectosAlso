@@ -1,6 +1,6 @@
 @extends('layouts.admin')
 @section('content')
-@can('permission_create')
+<!--@can('permission_create')
     <div style="margin-bottom: 10px;" class="row">
         <div class="col-lg-12">
             <a class="btn btn-success" href="{{ route("admin.permissions.create") }}">
@@ -8,10 +8,10 @@
             </a>
         </div>
     </div>
-@endcan
+@endcan-->
 <div class="card">
     <div class="card-header">
-        {{ trans('global.permission.title_singular') }} {{ trans('global.list') }}
+    {{ trans('global.list') }} de {{ trans('global.permission.title') }} 
     </div>
 
     <div class="card-body">
@@ -40,7 +40,7 @@
                                 {{ $permission->title ?? '' }}
                             </td>
                             <td>
-                                @can('permission_show')
+                               <!-- @can('permission_show')
                                     <a class="btn btn-xs btn-primary" href="{{ route('admin.permissions.show', $permission->id) }}">
                                         {{ trans('global.view') }}
                                     </a>
@@ -56,7 +56,7 @@
                                         <input type="hidden" name="_token" value="{{ csrf_token() }}">
                                         <input type="submit" class="btn btn-xs btn-danger" value="{{ trans('global.delete') }}">
                                     </form>
-                                @endcan
+                                @endcan -->
                             </td>
 
                         </tr>
@@ -69,7 +69,7 @@
 @section('scripts')
 @parent
 <script>
-    $(function () {
+ $(function () {
   let deleteButtonTrans = '{{ trans('global.datatables.delete') }}'
   let deleteButton = {
     text: deleteButtonTrans,
@@ -96,9 +96,9 @@
       }
     }
   }
-  let dtButtons = $.extend(true, [], $.fn.dataTable.defaults.buttons)
+    let dtButtons = $.extend(true, [], $.fn.dataTable.defaults.buttons)
 @can('permission_delete')
-  dtButtons.push(deleteButton)
+  //dtButtons.push(deleteButton)
 @endcan
 
   $('.datatable:not(.ajaxTable)').DataTable({ buttons: dtButtons })
