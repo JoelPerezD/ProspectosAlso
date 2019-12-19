@@ -24,7 +24,7 @@
             <!-- -->
             <div class="form-group {{ $errors->has('Giro') ? 'has-error' : '' }}">
                 <label for="Giro">{{ trans('global.client.fields.Giro') }}*</label>
-                <input type="text" id="Giro" name="Giro" class="form-control" value="{{ old('name', isset($client) ? $client->name : '') }}">
+                <input type="text" id="Giro" name="Giro" class="form-control" value="{{ old('Giro', isset($client) ? $client->Giro : '') }}">
                 @if($errors->has('Giro'))
                     <em class="invalid-feedback">
                         {{ $errors->first('Giro') }}

@@ -18,6 +18,12 @@ class StoreClientRequest extends FormRequest
             'RazonSocial' => [
                 'required',
             ],
+            'Giro' => [
+                'required',
+            ],
+            'Ciudad' => [
+                'required',
+            ],
         ];
     }
 }
